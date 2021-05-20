@@ -1,14 +1,11 @@
 language: go
 go:
   - 1.11.x
-
 install:
   - go get github.com/gohugoio/hugo
-
 script:
   - mkdir -p themes/beatifulhugo && git clone https://github.com/halogenica/beatifulhugo.git themes/beatifulhugo
   - hugo --themes beatifulhugo
-
 deploy:
   provider: pages
   skip_cleanup: true
